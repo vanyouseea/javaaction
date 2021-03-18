@@ -22,3 +22,7 @@ jobs:
         java-version: 1.8
     - name: Build with Maven
       run: mvn -B package --file pom.xml
+    - name: Run the jar
+      run: java -jar javaaction-0.1.jar
+      
+     
