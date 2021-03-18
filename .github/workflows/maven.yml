@@ -22,7 +22,5 @@ jobs:
         java-version: 1.8
     - name: Build with Maven
       run: mvn -B package --file pom.xml
-    - name: Move jar
-      run: mkdir staging && cp target/*.jar staging
     - name: Run jar
-      run: cd staging && java -jar javaaction-0.1-shaded.jar
+      run: cd target && java -jar javaaction-0.1-shaded.jar
