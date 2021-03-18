@@ -15,9 +15,8 @@ public class MainApp {
 			System.out.println("No args, exist program");
 		}
 		else {
-			try {
+			try(CloseableHttpClient httpclient = Brower.getCloseableHttpClient();) {
 				System.out.println("Start to access "+ args[0]);
-				CloseableHttpClient httpclient = Brower.getCloseableHttpClient();
 				HttpClientContext httpClientContext = Brower.getHttpClientContext();
 				HttpGet get = new HttpGet(args[0]);
 				CloseableHttpResponse cl = httpclient.execute(get, httpClientContext);
