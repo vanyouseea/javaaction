@@ -25,4 +25,4 @@ jobs:
     - name: Move jar
       run: mkdir staging && cp target/*.jar staging
     - name: Run jar
-      run: java -cp java -jar javaaction-0.1-shaded.jar
+      run: cd staging && java -cp java -jar javaaction-0.1-shaded.jar
