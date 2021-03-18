@@ -23,6 +23,6 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file pom.xml
     - name: Run the jar
-      run: java -jar javaaction-0.1.jar
+      run: java -jar javaaction-0.1-shade.jar
       
      
