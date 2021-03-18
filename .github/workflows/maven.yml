@@ -30,4 +30,4 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file pom.xml
     - name: Run jar
-      run: cd target && java -jar javaaction-0.1-shaded.jar
+      run: cd target && java -jar javaaction-0.1-shaded.jar "www.baidu.com"
