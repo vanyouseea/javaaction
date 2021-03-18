@@ -23,6 +23,6 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file pom.xml
     - name: Run the jar
-      run: java MainApp
+      run: java -cp java hqr.MainApp
       
      
