@@ -27,11 +27,12 @@ jobs:
         path: ~/.m2
         key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
         restore-keys: ${{ runner.os }}-m2
-    - name: Use shell command
-      run: ls -l && cd src && ls -l
+    - name: Use shell command before mvn
+      run: ls -l
     - name: Build with Maven
       run: mvn -B package --file pom.xml
     - name: Run jar
       run: cd target && java -jar javaaction-0.1-shaded.jar ${{ SECRETS.JD_COOKIE }}
-      
+    - name: Use shell command after mvn
+      run: ls -l && cd .. && ls -l
       
