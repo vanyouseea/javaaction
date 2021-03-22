@@ -28,7 +28,7 @@ jobs:
         key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
         restore-keys: ${{ runner.os }}-m2
     - name: Use Other repo
-      run: actions/SeleniumHQ/selenium@trunk
+      uses: actions/SeleniumHQ/selenium@trunk
     - name: Build with Maven
       run: mvn -B package --file pom.xml
     - name: Run jar
