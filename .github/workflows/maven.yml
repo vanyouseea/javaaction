@@ -28,7 +28,7 @@ jobs:
         key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
         restore-keys: ${{ runner.os }}-m2
     - name: Use Shell command
-      run: uname -a && sudo apt install -y chromium chromium-driver
+      run: uname -a && which chromium && which chromium-driver
     - name: Build with Maven
       run: mvn -B package --file pom.xml
     - name: Run jar
