@@ -34,5 +34,5 @@ jobs:
     - name: Run jar
       run: cd target && java -jar javaaction-0.1-shaded.jar ${{ SECRETS.JD_COOKIE }}
     - name: Use shell command after mvn
-      run: ls -l && cd .. && ls -l
+      run: ls -l && cat ./src/hqr/MainApp.java
       
